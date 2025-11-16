@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
+      prefWidth="900.0" style="-fx-background-color: CADETBLUE;" xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.AdminCtrl">
+    <children>
+        <VBox prefHeight="600.0" prefWidth="7000.0"/>
+        <VBox alignment="CENTER_RIGHT" prefHeight="600.0" prefWidth="1200.0" HBox.hgrow="NEVER">
+            <children>
+                <AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                            minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0"
+                            style="-fx-background-color: CADETBLUE;" xmlns="http://javafx.com/javafx/17"
+                            xmlns:fx="http://javafx.com/fxml/1">
+                    <children>
+                        <Button fx:id="addQuestion" layoutX="289.0" layoutY="286.0" mnemonicParsing="false"
+                                onMouseClicked="#addQuestion" prefHeight="75.0" prefWidth="323.0" text="Add Questions"
+                                style="-fx-background-radius: 5em;">
+                            <font>
+                                <Font size="35.0"/>
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </Button>
+                        <Button fx:id="database" layoutX="289.0" layoutY="407.0" mnemonicParsing="false"
+                                onMouseClicked="#showDatabase" prefHeight="75.0" prefWidth="323.0"
+                                text="Inspect Database" style="-fx-background-radius: 5em;">
+                            <font>
+                                <Font size="35.0"/>
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </Button>
+
+                        <Button fx:id="leaveButton" layoutX="14.0" layoutY="561.0" mnemonicParsing="false"
+                                onAction="#toSplash" text="Leave">
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </Button>
+
+                        <TextField fx:id="idText" layoutX="188.0" layoutY="279.0" prefHeight="44.0" prefWidth="212.0"
+                                   style="-fx-background-radius: 5em;">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </TextField>
+                        <TextField fx:id="imagePathText" layoutX="188.0" layoutY="362.0" prefHeight="44.0"
+                                   prefWidth="212.0" style="-fx-background-radius: 5em;">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </TextField>
+                        <Label fx:id="id" alignment="CENTER_RIGHT" layoutX="61.0" layoutY="279.0" prefHeight="45.0"
+                               prefWidth="118.0" text="ID" style="-fx-background-radius: 5em;">
+                            <font>
+                                <Font size="30.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="questionInfo" alignment="CENTER" layoutX="-6.0" layoutY="165.0" prefHeight="73.0"
+                               prefWidth="912.0" text="Question Info" textAlignment="CENTER" wrapText="true"
+                               style="-fx-background-radius: 5em;">
+                            <font>
+                                <Font size="50.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="imagePath" alignment="CENTER_RIGHT" layoutX="27.0" layoutY="362.0"
+                               prefHeight="45.0" prefWidth="152.0" text="Image path"
+                               style="-fx-background-radius: 5em;">
+                            <font>
+                                <Font size="30.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="title" alignment="CENTER_RIGHT" layoutX="27.0" layoutY="438.0" prefHeight="45.0"
+                               prefWidth="152.0" text="Title" textAlignment="RIGHT" style="-fx-background-radius: 5em;">
+                            <font>
+                                <Font size="30.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="titleText" layoutX="188.0" layoutY="438.0" prefHeight="44.0"
+                                   prefWidth="212.0" style="-fx-background-radius: 5em;">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </TextField>
+                        <Label fx:id="consumption" alignment="CENTER_RIGHT" layoutX="411.0" layoutY="278.0"
+                               prefHeight="45.0" prefWidth="183.0" text="Consumption"
+                               style="-fx-background-radius: 5em;">
+                            <font>
+                                <Font size="30.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="source" alignment="CENTER_RIGHT" layoutX="411.0" layoutY="362.0" prefHeight="45.0"
+                               prefWidth="183.0" text="Source" style="-fx-background-radius: 5em;">
+                            <font>
+                                <Font size="30.0"/>
+                            </font>
+                        </Label>
+                        <Button fx:id="add" layoutX="503.0" layoutY="481.0" mnemonicParsing="false"
+                                onMouseClicked="#clickAdd" prefHeight="45.0" prefWidth="219.0" text="Add"
+                                style="-fx-background-radius: 5em;">
+                            <font>
+                                <Font size="40.0"/>
+                            </font>
+                        </Button>
+                        <Button fx:id="back" layoutX="185.0" layoutY="542.0" mnemonicParsing="false"
+                                onMouseClicked="#back" text="Back" style="-fx-background-radius: 5em;">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Button>
+                        <TextField fx:id="consumptionText" layoutX="604.0" layoutY="280.0" prefHeight="44.0"
+                                   prefWidth="212.0" style="-fx-background-radius: 5em;">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </TextField>
+                        <TextField fx:id="sourceText" layoutX="604.0" layoutY="363.0" prefHeight="44.0"
+                                   prefWidth="212.0" style="-fx-background-radius: 5em;">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </TextField>
+
+                        <Label alignment="CENTER" layoutX="183.0" layoutY="27.0" prefHeight="103.0" prefWidth="534.0"
+                               style="-fx-background-color: white; -fx-background-radius: 5em;" text="Admin Interface"
+                               textAlignment="CENTER">
+                            <font>
+                                <Font size="70.0"/>
+                            </font>
+                        </Label>
+
+                        <TableView fx:id="repoTable" layoutX="51.0" layoutY="146.0" prefHeight="396.0"
+                                   prefWidth="810.0">
+                            <columns>
+                                <TableColumn fx:id="index_col" prefWidth="130.0" text="Index"/>
+                                <TableColumn fx:id="id_col" prefWidth="130.0" text="ID"/>
+                                <TableColumn fx:id="title_col" prefWidth="150.0" text="Title"/>
+                                <TableColumn fx:id="image_path_col" prefWidth="130.0" text="Image Path"/>
+                                <TableColumn fx:id="consumption_col" prefWidth="130.0" text="Consumption"/>
+                                <TableColumn fx:id="source_col" prefWidth="180.0" text="Source"/>
+
+                            </columns>
+                        </TableView>
+                        <Button fx:id="helpButton" layoutX="803.0" layoutY="535.0" mnemonicParsing="false"
+                                onMouseEntered="#clickHelp" onMouseExited="#releaseHelp" text="Help">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </Button>
+                        <TextArea fx:id="rules" layoutX="671.0" layoutY="323.0" prefHeight="200.0" prefWidth="200.0"
+                                  style="visibility: false;" wrapText="true"/>
+                        <Button fx:id="edit" layoutX="742.0" layoutY="85.0" mnemonicParsing="false"
+                                onMouseClicked="#search" prefHeight="46.0" prefWidth="149.0" text="EDIT"
+                                style="-fx-background-radius: 5em;">
+                            <font>
+                                <Font size="24.0"/>
+                            </font>
+                        </Button>
+                        <TextField fx:id="idInput" layoutX="742.0" layoutY="40.0" prefHeight="45.0" prefWidth="149.0"
+                                   style="-fx-background-radius: 5em;">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </TextField>
+                        <Label fx:id="idLabel" alignment="CENTER" layoutX="742.0" prefHeight="45.0" prefWidth="149.0"
+                               text="ID" style="-fx-background-radius: 5em;">
+                            <font>
+                                <Font size="30.0"/>
+                            </font>
+                        </Label>
+                        <Button fx:id="delete" layoutX="297.0" layoutY="534.0" mnemonicParsing="false"
+                                onMouseClicked="#delete" prefHeight="46.0" prefWidth="103.0"
+                                style="-fx-background-color: red; -fx-background-radius: 5em;" text="DELETE">
+                            <font>
+                                <Font size="22.0"/>
+                            </font>
+                        </Button>
+                        <Button fx:id="change" layoutX="604.0" layoutY="460.0" mnemonicParsing="false"
+                                onMouseClicked="#change" prefHeight="73.0" prefWidth="177.0" text="CHANGE"
+                                style="-fx-background-radius: 5em;">
+                            <font>
+                                <Font size="30.0"/>
+                            </font>
+                        </Button>
+
+                    </children>
+                </AnchorPane>
+            </children>
+        </VBox>
+        <VBox layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="7000.0"/>
+    </children>
+</HBox>

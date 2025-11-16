@@ -1,0 +1,49 @@
+### Manual testing of the visual features of the game!
+
+**1. Splash Screen**
+
+- Once the user starts the game the splash screen is going to appear!
+- The user can enter their name and the preferred server
+- The user will also see 3 more buttons "Solo", "Multiplayer" and "Admin"
+- There is also a help button which provides help in case of confusion!
+- If the user enters an invalid IP an alert will appear to inform them!
+- If the user decides to close the game at any point they will be first asked if they are sure, this is done to prevent possible accidental closures
+
+**2. Solo mode**
+
+- We will focus on solo now
+- Once the user has entered all the necessary fields and click solo, the game is going to load and start
+- There will be a timer in the top corner, also beside it will be the `Score` and Power-up buttons the player can use.
+- Joker button eliminates one wrong answer and the Double-up power-up doubles the points for the current question
+- The power-ups can be used once per game, per user. If the user tries to click/activate the buttons again nothing is going to happen
+- The question text will be on top of the screen
+- If the user hovers over any of the answers a picture will appear which each answer in the center of the screen
+- There will be 4 different types of questions, each will be distinct from the others
+- After 20 rounds have passed the user will be sent to the Solo leaderboard where they can compare their score with the best of the best
+- Then the user can click "Main menu" which will lead them back to the Splash screen
+- There is a leave button in red, which allows the user to leave the game and start a new one
+- The Joker power up can not be used in the open question type
+
+**3. Multiplayer**
+
+- The user will be allowed to start a multiplayer game only if their name is unique for the lobby and if
+- After clicking the multiplayer the user will be sent to a waiting lobby which tells them the amount of people in the lobby
+- Everyone can click start! All the players will receive the same questions and answers
+- The scores, images and buttons will be the same as in singleplayer
+- There will be an extra joker - Time Attack, which can be user once and it decreases the time left for all players
+- There is a set of 3 emojis that can be used by the user to express their emotions
+- When the emojis are clicked they change the background for all players. If all of them are angry, the screen is going to be red, if all of them are happy it is going to be green.
+- The user will see a halfway leaderboard after the 10th question and a final leaderboard
+- The user will have a `Replay` button which directly puts them in a new waiting lobby
+- Then the user can click "Main menu" which will lead them back to the Splash screen
+- There is a leave button in red, which allows the user to leave the game and start a new one
+- The Joker power up can not be used in the open question type
+
+
+**4. Admin Panel**
+
+- The user can enter the Admin panel only after entering a sever IP(No other Authentication)
+- Once inside the user can inspect a table of all the questions in the database
+- They can search by ID which would allow them to easily edit activities
+- The user can also add activities with the `Add Activity` button. They fill in all the fields and click `Add`
+- A new screen will appear informing the user when the operation is successful

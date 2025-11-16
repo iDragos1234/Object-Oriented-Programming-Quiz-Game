@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox fx:id="hBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.LeaderboardSPScreenCtrl">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="7000.0" />
+      <VBox alignment="CENTER" minHeight="600.0" minWidth="900.0" prefHeight="600.0" prefWidth="900.0" HBox.hgrow="NEVER">
+         <children>
+            <AnchorPane prefHeight="600.0" prefWidth="900.0">
+               <children>
+                  <Label layoutX="310.0" layoutY="14.0" text="Leaderboard">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="mainMenu" layoutX="14.0" layoutY="143.0" mnemonicParsing="false" onAction="#toMainMenu" prefHeight="43.0" prefWidth="119.0" text="Main Menu" />
+                  <Label fx:id="posPlayer" text="Label" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="280.0" AnchorPane.topAnchor="500.0" />
+                  <BarChart fx:id="top10chart" alternativeColumnFillVisible="true" alternativeRowFillVisible="false" animated="false" barGap="0.0" categoryGap="0.0" horizontalGridLinesVisible="false" legendVisible="false" title="TOP 10" verticalZeroLineVisible="false" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+                    <xAxis>
+                      <CategoryAxis animated="false" endMargin="0.0" side="BOTTOM" startMargin="0.0" style="-fx-translate-x: -25;" tickMarkVisible="false" fx:id="xAxis">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets></CategoryAxis>
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="yAxis" minorTickCount="2" minorTickVisible="false" side="LEFT" tickLabelGap="5.0" tickLength="12.0" tickMarkVisible="false" />
+                    </yAxis>
+                  </BarChart>
+                  <TableView fx:id="leaderboardTable" layoutX="180.0" layoutY="129.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="100.0" AnchorPane.topAnchor="100.0">
+                    <columns>
+                      <TableColumn fx:id="nameColumn" prefWidth="88.0" text="Name" />
+                      <TableColumn fx:id="scoreColumn" prefWidth="97.0" text="Score" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <HBox prefHeight="100.0" prefWidth="7000.0" />
+   </children>
+</HBox>

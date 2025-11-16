@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox fx:id="hbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="client.scenes.SplashScreenCtrl">
+    <children>
+        <VBox prefHeight="600.0" prefWidth="7000.0"/>
+        <VBox alignment="CENTER_RIGHT" prefHeight="600.0" prefWidth="1200.0" HBox.hgrow="NEVER">
+            <children>
+                <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="600.0" prefWidth="900.0"
+                            VBox.vgrow="NEVER" xmlns="http://javafx.com/javafx/11.0.2"
+                            xmlns:fx="http://javafx.com/fxml/1">
+                    <children>
+                        <Label alignment="CENTER" layoutX="324.0" layoutY="72.0" minWidth="-Infinity" prefHeight="116.0"
+                               prefWidth="106.0" text="QuiZ" textAlignment="CENTER" VBox.vgrow="NEVER">
+                            <font>
+                                <Font size="45.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="420.0" layoutY="101.0" minWidth="-Infinity" prefHeight="54.0"
+                               prefWidth="42.0" rotate="14.9" text="Z" textAlignment="CENTER" VBox.vgrow="NEVER">
+                            <font>
+                                <Font size="45.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="439.0" layoutY="112.0" minWidth="-Infinity" prefHeight="60.0"
+                               prefWidth="58.0" rotate="31.6" text="Z" textAlignment="CENTER" VBox.vgrow="NEVER">
+                            <font>
+                                <Font size="45.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="usernameField" layoutX="295.0" layoutY="211.0" prefHeight="37.0"
+                                   prefWidth="207.0" VBox.vgrow="NEVER" style="-fx-background-radius: 5em;">
+                            <cursor>
+                                <Cursor fx:constant="TEXT"/>
+                            </cursor>
+                        </TextField>
+                        <TextField fx:id="urlField" layoutX="295.0" layoutY="257.0" prefHeight="37.0" prefWidth="207.0"
+                                   VBox.vgrow="NEVER" style="-fx-background-radius: 5em;">
+                            <cursor>
+                                <Cursor fx:constant="TEXT"/>
+                            </cursor>
+                        </TextField>
+                        <Button layoutX="295.0" layoutY="308.0" mnemonicParsing="false" onAction="#toSoloGame"
+                                prefHeight="72.0" prefWidth="207.0" text="Solo" VBox.vgrow="NEVER"
+                                style="-fx-background-radius: 5em; -fx-background-color: radial-gradient(center 100px 30px, radius 120px, lightblue, dodgerblue);">
+                            <font>
+                                <Font size="28.0"/>
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </Button>
+                        <ImageView fitHeight="246.0" fitWidth="170.0" layoutX="650.0" layoutY="194.0"
+                                   pickOnBounds="true" preserveRatio="true" VBox.vgrow="NEVER">
+                            <image>
+                                <Image url="@/images/QM.png"/>
+                            </image>
+                        </ImageView>
+                        <Button layoutX="295.0" layoutY="398.0" mnemonicParsing="false" onAction="#toWaitingLobby"
+                                prefHeight="72.0" prefWidth="207.0" text="Multiplayer" VBox.vgrow="NEVER"
+                                style="-fx-background-radius: 5em; -fx-background-color: radial-gradient(center 100px 30px, radius 100px, lightblue, dodgerblue);">
+                            <font>
+                                <Font size="28.0"/>
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </Button>
+
+                        <ImageView fitHeight="246.0" fitWidth="170.0" layoutY="194.0" pickOnBounds="true"
+                                   preserveRatio="true" VBox.vgrow="NEVER">
+
+                            <image>
+                                <Image url="@/images/QM.png"/>
+                            </image>
+                        </ImageView>
+                        <Button fx:id="helpButton" layoutX="702.0" layoutY="529.0" mnemonicParsing="false"
+                                onMouseEntered="#clickHelp" onMouseExited="#releaseHelp" prefHeight="44.0"
+                                prefWidth="95.0" text="Help"/>
+                        <TextArea fx:id="rules" layoutX="543.0" layoutY="317.0" onMouseEntered="#clickHelp"
+                                  onMouseExited="#releaseHelp" prefHeight="191.0" prefWidth="207.0"
+                                  style="visibility: false;" text="rules" wrapText="true"/>
+                        <Button layoutX="295.0" layoutY="488.0" mnemonicParsing="false" onAction="#toAdmin"
+                                prefHeight="72.0" prefWidth="207.0" text="Admin"
+                                style="-fx-background-radius: 5em; -fx-background-color: radial-gradient(center 100px 30px, radius 120px, lightblue, dodgerblue);">
+                            <font>
+                                <Font size="28.0"/>
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </Button>
+                    </children>
+                    <opaqueInsets>
+                        <Insets/>
+                    </opaqueInsets>
+                    <cursor>
+                        <Cursor fx:constant="DEFAULT"/>
+                    </cursor>
+                    <effect>
+                        <ColorAdjust/>
+                    </effect>
+                </AnchorPane>
+            </children>
+        </VBox>
+        <VBox layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="7000.0"/>
+    </children>
+</HBox>

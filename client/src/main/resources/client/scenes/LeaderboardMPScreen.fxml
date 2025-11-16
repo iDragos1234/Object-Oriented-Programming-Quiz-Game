@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox fx:id="hBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.LeaderboardMPScreenCtrl">
+    <children>
+        <HBox prefHeight="100.0" prefWidth="7000.0" />
+        <VBox alignment="CENTER" minHeight="600.0" minWidth="900.0" prefHeight="600.0" prefWidth="900.0" HBox.hgrow="NEVER">
+            <children>
+                <AnchorPane prefHeight="600.0" prefWidth="900.0">
+                    <children>
+                        <Label layoutX="311.0" layoutY="14.0" text="Leaderboard">
+                            <font>
+                                <Font size="50.0" />
+                            </font>
+                        </Label>
+                        <AnchorPane layoutX="193.0" layoutY="87.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="100.0">
+                            <children>
+                                <Label fx:id="pos1" alignment="CENTER" layoutX="199.0" layoutY="83.0" minHeight="-Infinity" prefHeight="43.0" prefWidth="600.0" style="-fx-background-color: gold;" text="Player1" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                <Label fx:id="pos2" alignment="CENTER" layoutY="43.0" minHeight="-Infinity" prefHeight="43.0" prefWidth="600.0" style="-fx-background-color: silver;" text="Player2" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                <Label fx:id="pos3" alignment="CENTER" layoutY="86.0" minHeight="-Infinity" prefHeight="43.0" prefWidth="600.0" style="-fx-background-color: #CD7F32;" text="Player3" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                <Label fx:id="pos4" alignment="CENTER" layoutY="129.0" minHeight="-Infinity" prefHeight="43.0" prefWidth="600.0" text="Player4" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                <Label fx:id="pos5" alignment="CENTER" layoutY="172.0" minHeight="-Infinity" prefHeight="43.0" prefWidth="600.0" text="Player5" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                <Label fx:id="pos6" alignment="CENTER" layoutY="215.0" minHeight="-Infinity" prefHeight="43.0" prefWidth="600.0" text="Player6" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                <Label fx:id="pos7" alignment="CENTER" layoutY="258.0" minHeight="-Infinity" prefHeight="43.0" prefWidth="600.0" text="Player7" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                <Label fx:id="pos8" alignment="CENTER" layoutY="301.0" minHeight="-Infinity" prefHeight="43.0" prefWidth="600.0" text="Player8" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                <Label fx:id="pos9" alignment="CENTER" layoutY="344.0" minHeight="-Infinity" prefHeight="43.0" prefWidth="600.0" text="Player9" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                <Label fx:id="pos10" alignment="CENTER" layoutY="387.0" minHeight="-Infinity" prefHeight="43.0" prefWidth="600.0" text="Player10" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                <Label fx:id="posPlayer" alignment="CENTER" layoutX="-84.0" layoutY="444.0" minHeight="-Infinity" prefHeight="43.0" prefWidth="600.0" text="Your Position:" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                            </children>
+                        </AnchorPane>
+                        <Button fx:id="mainMenu" layoutX="14.0" layoutY="143.0" mnemonicParsing="false" onAction="#toMainMenu" prefHeight="43.0" prefWidth="117.0" text="Main Menu" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="760.0" />
+                        <Button fx:id="rejoin" layoutX="769.0" layoutY="143.0" mnemonicParsing="false" onAction="#toWaitingLobby" prefHeight="43.0" prefWidth="117.0" text="Rejoin" AnchorPane.leftAnchor="760.0" AnchorPane.rightAnchor="10.0" />
+                  <BarChart fx:id="leaderbar" categoryGap="1.0" prefHeight="154.0" prefWidth="149.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="600.0" AnchorPane.topAnchor="250.0">
+                      <xAxis>
+                          <CategoryAxis animated="false" endMargin="0.0" side="BOTTOM" startMargin="0.0" style="-fx-translate-x: -25;" tickMarkVisible="false" fx:id="xAxis">
+                              <opaqueInsets>
+                                  <Insets />
+                              </opaqueInsets></CategoryAxis>
+                      </xAxis>
+                      <yAxis>
+                          <NumberAxis fx:id="yAxis" minorTickCount="2" minorTickVisible="false" side="LEFT" tickLabelGap="5.0" tickLength="12.0" tickMarkVisible="false" />
+                      </yAxis>
+                  </BarChart>
+                    </children>
+                </AnchorPane>
+            </children>
+        </VBox>
+        <HBox prefHeight="100.0" prefWidth="7000.0" />
+    </children>
+</HBox>

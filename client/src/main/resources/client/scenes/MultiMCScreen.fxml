@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="hBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: CADETBLUE;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.MultiMCScreenCtrl">
+    <children>
+        <VBox fx:id="vBox" prefHeight="600.0" prefWidth="7000.0" />
+        <VBox alignment="CENTER_RIGHT" prefHeight="600.0" prefWidth="1200.0" HBox.hgrow="NEVER">
+            <children>
+                <AnchorPane fx:id="pane" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+                    <children>
+                        <Label fx:id="questionLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="98.0" layoutY="37.0" prefWidth="676.0" text="Question text" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                            <font>
+                                <Font name="Bell MT Italic" size="36.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="buttonA" layoutX="20.0" layoutY="476.0" minHeight="54.0" mnemonicParsing="false" onAction="#answerA" prefWidth="252.0" style="-fx-background-radius: 5em; -fx-background-color: linear-gradient(to right, #e7b8f2, #dd68f7)" text="A:" textAlignment="CENTER" wrapText="true" VBox.vgrow="NEVER">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="buttonB" layoutX="310.0" layoutY="476.0" minHeight="54.0" mnemonicParsing="false" onAction="#answerB" prefWidth="252.0" style="-fx-background-radius: 5em; -fx-background-color: linear-gradient(to right, #dd68f7, #d131f5)" text="B:" textAlignment="CENTER" wrapText="true" VBox.vgrow="NEVER">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="buttonC" layoutX="604.0" layoutY="476.0" minHeight="54.0" mnemonicParsing="false" onAction="#answerC" prefWidth="252.0" style="-fx-background-radius: 5em; -fx-background-color: linear-gradient(to right, #d131f5, #ad00d4)" text="C:" textAlignment="CENTER" wrapText="true" VBox.vgrow="NEVER">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Button>
+                        <Label layoutX="709.0" layoutY="69.0" prefHeight="34.0" prefWidth="120.0" text="Score:" textFill="WHITE" VBox.vgrow="NEVER">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <ImageView fx:id="imageView" fitHeight="212.0" fitWidth="320.0" layoutX="290.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true" />
+                        <Button fx:id="joker" layoutX="733.0" layoutY="110.0" mnemonicParsing="false" onAction="#joker_Action" prefHeight="40.0" prefWidth="91.0" style="-fx-background-radius: 5em" VBox.vgrow="NEVER">
+                            <graphic>
+                                <ImageView>
+                                    <Image url="@/images/joker.png" />
+                                </ImageView>
+                            </graphic>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="doubleP" layoutX="733.0" layoutY="171.0" mnemonicParsing="false" onAction="#doubleP_Action" prefHeight="40.0" prefWidth="91.0" style="-fx-background-radius: 5em" VBox.vgrow="NEVER">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <graphic>
+                                <ImageView>
+                                    <Image url="@/images/doublePoints.png" />
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="leaveButton" layoutY="557.0" mnemonicParsing="false" onAction="#toSplash" text="Leave" VBox.vgrow="NEVER">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Button>
+                        <Button layoutY="35.0" mnemonicParsing="false" onAction="#happyEmoji" prefHeight="46.0" prefWidth="47.0" style="-fx-background-radius: 5em; -fx-background-color:Green">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <graphic>
+
+                            </graphic>
+                        </Button>
+                        <Button fx:id="helpButton" layoutX="803.0" layoutY="535.0" mnemonicParsing="false" onMouseEntered="#clickHelp" onMouseExited="#releaseHelp" text="Help">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+                        <TextArea fx:id="rules" layoutX="671.0" layoutY="323.0" prefHeight="200.0" prefWidth="200.0" style="visibility: false;" text="RULESSSSSSSSSSSSSSS&#10;SSSSSSSSSSSSSSSSSSSS&#10;SSSSSSSSS" wrapText="true" />
+                        <Button layoutY="86.0" mnemonicParsing="false" onAction="#angryEmoji" prefHeight="46.0" prefWidth="47.0" style="-fx-background-radius: 5em; -fx-background-color:RED">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+                        <Button layoutY="137.0" mnemonicParsing="false" onAction="#puzzledEmoji" prefHeight="46.0" prefWidth="47.0" style="-fx-background-radius: 5em; -fx-background-color:BLUE">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+                        <ImageView fitHeight="46.0" fitWidth="47.0" layoutY="36.0" onMouseClicked="#happyEmoji" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/images/Happy.png" />
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ImageView>
+                        <ImageView fitHeight="46.0" fitWidth="47.0" layoutY="87.0" onMouseClicked="#angryEmoji" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/images/angry.png" />
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ImageView>
+                        <ImageView fitHeight="46.0" fitWidth="47.0" layoutY="138.0" onMouseClicked="#puzzledEmoji" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/images/puzzled.png" />
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ImageView>
+                        <ImageView fx:id="answerImage" fitHeight="244.0" fitWidth="350.0" layoutX="272.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="score" alignment="CENTER_RIGHT" layoutX="769.0" layoutY="69.0" prefHeight="34.0" prefWidth="64.0" text="0" textFill="WHITE">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="correctAnswer" alignment="CENTER" layoutX="562.0" layoutY="323.0" prefHeight="105.0" prefWidth="320.0" style="-fx-background-color: FF00FF; -fx-background-radius: 5em" text="Answer" wrapText="true">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="attachment" alignment="CENTER" contentDisplay="CENTER" layoutX="190.0" layoutY="89.0" prefWidth="475.0" text="Activity Title" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                            <font>
+                                <Font name="Bell MT" size="24.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="timeA" layoutX="733.0" layoutY="232.0" mnemonicParsing="false" onAction="#timeA_Action" prefHeight="40.0" prefWidth="91.0" style="-fx-background-radius: 5em">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <graphic>
+                                <ImageView>
+                                    <Image url="@/images/timeAttack.png" />
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <ProgressBar id="timeBar" fx:id="timeBar" layoutY="2.0" prefHeight="25.0" prefWidth="900.0" progress="1.0" styleClass="timeBar" />
+                        <Label fx:id="gainedScore" alignment="CENTER_RIGHT" layoutX="778.0" layoutY="43.0" prefHeight="35.0" textFill="#00ff1e">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <ImageView fx:id="timeUp" fitHeight="426.0" fitWidth="499.0" layoutX="237.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                            <image>
+                                <Image url="@/images/time_is_up.gif" />
+                            </image>
+                        </ImageView>
+                  <TextField fx:id="timeAttackAlert" layoutX="2.0" layoutY="199.0" prefHeight="40.0" prefWidth="192.0" text="SOMEONE USED TIME ATTACK!!!" />
+
+                    </children>
+                </AnchorPane>
+            </children>
+        </VBox>
+        <VBox layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="7000.0" />
+    </children>
+</HBox>

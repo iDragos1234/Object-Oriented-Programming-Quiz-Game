@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
+      prefWidth="900.0" style="-fx-background-color: CADETBLUE;" xmlns="http://javafx.com/javafx/11.0.2"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.SoloMCScreenCtrl">
+    <children>
+        <VBox prefHeight="600.0" prefWidth="7000.0"/>
+        <VBox alignment="CENTER_RIGHT" prefHeight="600.0" prefWidth="1200.0" HBox.hgrow="NEVER">
+            <children>
+                <AnchorPane maxHeight="600.0" maxWidth="900.0" prefHeight="600.0" prefWidth="894.0"
+                            xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+                    <children>
+                        <ImageView fx:id="answerImage" fitHeight="350.0" fitWidth="550.0" layoutX="176.0"
+                                   layoutY="114.0" pickOnBounds="true" smooth="false" AnchorPane.leftAnchor="176.0"
+                                   AnchorPane.rightAnchor="186.0"/>
+                        <Label fx:id="questionText" alignment="CENTER" contentDisplay="CENTER" layoutX="107.0"
+                               layoutY="33.0" prefWidth="689.0" text="Question text" textAlignment="CENTER"
+                               wrapText="true">
+                            <font>
+                                <Font name="Bell MT Italic" size="28.0"/>
+                            </font>
+                        </Label>
+                        <Button fx:id="buttonA" layoutX="106.0" layoutY="476.0" maxHeight="100.0" minHeight="54.0"
+                                mnemonicParsing="false" onMouseClicked="#answerA" onMouseEntered="#showImageA"
+                                prefWidth="204.0" text="A:" textAlignment="CENTER" wrapText="true" VBox.vgrow="NEVER"
+                                style="-fx-background-radius: 5em; -fx-background-color: linear-gradient(to right, #e7b8f2, #dd68f7)">
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                            <font>
+                                <Font size="14.0"/>
+                            </font>
+                        </Button>
+                        <Button fx:id="buttonB" layoutX="349.0" layoutY="476.0" maxHeight="100.0" minHeight="54.0"
+                                mnemonicParsing="false" onMouseClicked="#answerB" onMouseEntered="#showImageB"
+                                prefWidth="204.0" text="B:" textAlignment="CENTER" wrapText="true" VBox.vgrow="NEVER"
+                                style="-fx-background-radius: 5em; -fx-background-color: linear-gradient(to right, #dd68f7, #d131f5)">
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                            <font>
+                                <Font size="14.0"/>
+                            </font>
+                        </Button>
+                        <Button fx:id="buttonC" layoutX="591.0" layoutY="476.0" maxHeight="100.0" minHeight="54.0"
+                                mnemonicParsing="false" onMouseClicked="#answerC" onMouseEntered="#showImageC"
+                                prefWidth="204.0" text="C:" textAlignment="CENTER" wrapText="true" VBox.vgrow="NEVER"
+                                style="-fx-background-radius: 5em; -fx-background-color: linear-gradient(to right, #d131f5, #ad00d4)">
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                            <font>
+                                <Font size="14.0"/>
+                            </font>
+                        </Button>
+                        <Label fx:id="score" layoutX="809.0" layoutY="92.0" prefHeight="34.0" prefWidth="68.0" text="0"
+                               VBox.vgrow="NEVER">
+                            <font>
+                                <Font size="24.0"/>
+                            </font>
+                        </Label>
+                        <Button fx:id="joker" layoutX="748.0" layoutY="137.0" mnemonicParsing="false"
+                                style="-fx-background-radius: 5em" onMouseClicked="#callJoker" prefHeight="34.0"
+                                prefWidth="91.0" styleClass="jokerButton" VBox.vgrow="NEVER">
+                            <graphic>
+                                <ImageView>
+                                    <Image url="@/images/joker.png"/>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="doublePoints" layoutX="748.0" layoutY="198.0" mnemonicParsing="false"
+                                style="-fx-background-radius: 5em" onMouseClicked="#doublePoints" prefHeight="34.0"
+                                prefWidth="91.0" styleClass="jokerButton" VBox.vgrow="NEVER">
+                            <graphic>
+                                <ImageView>
+                                    <Image url="@/images/doublePoints.png"/>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="leaveButton" layoutX="14.0" layoutY="561.0" mnemonicParsing="false"
+                                onAction="#toSplash" text="Leave" VBox.vgrow="NEVER"/>
+                        <Button fx:id="helpButton" layoutX="803.0" layoutY="535.0" mnemonicParsing="false"
+                                onMouseEntered="#clickHelp" onMouseExited="#releaseHelp" text="Help">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </Button>
+                        <Button fx:id="nextQuestion" layoutX="708.0" layoutY="276.0" mnemonicParsing="false"
+                                onAction="#nextQClicked" onMouseClicked="#initialize" prefHeight="62.0"
+                                prefWidth="127.0" text="Next">
+                            <font>
+                                <Font size="25.0"/>
+                            </font>
+                        </Button>
+                        <Label fx:id="answer" alignment="CENTER" layoutX="274.0" layoutY="189.0" minHeight="167.0"
+                               prefWidth="353.0" style="-fx-background-color: white; -fx-background-radius: 5em"
+                               text="ANSWER" textAlignment="CENTER" wrapText="true">
+                            <font>
+                                <Font size="30.0"/>
+                            </font>
+                        </Label>
+                        <TextArea fx:id="rules" prefHeight="160.0" prefWidth="200.0" style="visibility: false;" text=" "
+                                  wrapText="true" AnchorPane.bottomAnchor="70.0" AnchorPane.rightAnchor="40.0"/>
+                        <ProgressBar id="timeBar" fx:id="timeBar" layoutX="-2.0" layoutY="2.0" prefHeight="25.0"
+                                     prefWidth="900.0" progress="1.0" styleClass="timeBar"/>
+                        <Label fx:id="time" layoutX="372.0" layoutY="99.0" prefHeight="30.0" prefWidth="153.0"
+                               textFill="RED">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="gainedScore" layoutX="794.0" layoutY="56.0" textFill="#00ff1e">
+                            <font>
+                                <Font size="24.0"/>
+                            </font>
+                        </Label>
+                        <Label layoutX="730.0" layoutY="91.0" prefHeight="35.0" prefWidth="91.0" text="Score: ">
+                            <font>
+                                <Font size="24.0"/>
+                            </font>
+                        </Label>
+                        <ImageView fx:id="timeUp" fitHeight="426.0" fitWidth="499.0" layoutX="243.0" layoutY="50.0"
+                                   pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/images/time_is_up.gif"/>
+                            </image>
+                            <effect>
+                                <Glow/>
+                            </effect>
+                        </ImageView>
+
+                    </children>
+                </AnchorPane>
+            </children>
+        </VBox>
+        <VBox layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="7000.0"/>
+    </children>
+</HBox>

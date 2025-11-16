@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
+      prefWidth="900.0" style="-fx-background-color: CADETBLUE;" xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.WaitingLobbyCtrl">
+
+
+    <children>
+        <VBox prefHeight="600.0" prefWidth="7000.0"/>
+        <VBox alignment="CENTER_RIGHT" prefHeight="600.0" prefWidth="1200.0" HBox.hgrow="NEVER">
+            <children>
+                <AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                            minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0"
+                            style="-fx-background-color: CADETBLUE;" xmlns="http://javafx.com/javafx/17"
+                            xmlns:fx="http://javafx.com/fxml/1">
+                    <children>
+                        <TextField fx:id="numOfP" layoutX="268.0" layoutY="271.0" prefHeight="102.0" prefWidth="370.0"
+                                   style="-fx-background-color: orchid; -fx-background-radius: 5em"
+                                   text="Players in the lobby: ">
+                            <font>
+                                <Font size="30.0"/>
+                            </font>
+                        </TextField>
+                        <TextField fx:id="title" alignment="TOP_CENTER" layoutX="232.0" layoutY="62.0"
+                                   prefHeight="117.0" prefWidth="435.0" text="Waiting Lobby"
+                                   style="-fx-background-radius: 5em; -fx-background-color: orange">
+                            <font>
+                                <Font size="55.0"/>
+                            </font>
+                        </TextField>
+                        <Button fx:id="startButton" layoutX="302.0" layoutY="460.0" mnemonicParsing="false"
+                                onMouseReleased="#startMulti" text="Start The Game!"
+                                style="-fx-background-radius: 5em;">
+                            <font>
+                                <Font size="35.0"/>
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </Button>
+                        <Button fx:id="helpButton" layoutX="803.0" layoutY="535.0" mnemonicParsing="false"
+                                onMouseEntered="#clickHelp" onMouseExited="#releaseHelp" text="Help">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </Button>
+                        <Button fx:id="leaveButton" layoutX="14.0" layoutY="561.0" mnemonicParsing="false"
+                                onAction="#toSplash" text="Leave">
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </Button>
+
+                        <TextArea fx:id="rules" layoutX="671.0" layoutY="323.0" prefHeight="200.0" prefWidth="200.0"
+                                  style="visibility: false;" text="rules"/>
+                        <Text fx:id="playersInLobby" layoutX="563.0" layoutY="335.0" strokeType="OUTSIDE"
+                              strokeWidth="0.0" text="0" wrappingWidth="68.79999999999995">
+                            <font>
+                                <Font size="30.0"/>
+                            </font>
+                        </Text>
+                    </children>
+                </AnchorPane>
+            </children>
+        </VBox>
+        <VBox layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="7000.0"/>
+    </children>
+</HBox>
