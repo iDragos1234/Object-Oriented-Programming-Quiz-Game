@@ -1,10 +1,10 @@
-# Starting template
+# CSE1105 Object Oriented Programming Project: Quiz Game
 
-This README will need to contain a description of your project, how to run it, how to set up the development environment, and who worked on it.
-This information can be added throughout the course, except for the names of the group members.
-Add your own name (do not add the names for others!) to the section below.
 
 ## Description of project
+
+As part of this project course, our team worked on implementing a quiz game in Java, using Gradle, Spring and JavaFX. 
+
 
 ## Group members
 
@@ -22,9 +22,10 @@ Add your own name (do not add the names for others!) to the section below.
 <!-- - Preferably add a recognizable photo, otherwise add your GitLab photo -->
 <!-- - (please make sure the photos have the same size) --> 
 
+
 ## How to run it
 
- - Installing the game on Windows:
+Installing the game on Windows:
 
 1. Download the latest version of Java, JavaFX and Gradle
 2. Go to the oopp-group-50 repository and clone the main branch on your system from the clone button(make sure you have a SSH key):
